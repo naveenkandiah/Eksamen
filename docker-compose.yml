@@ -2,7 +2,7 @@ version: '3'
 
 services:
   product-service:
-    build: .Eksamen
+    build: .product
     volumes:
       - ./Users/NaveenKandiah/Documents/GitHub/Eksamen/api.py
     ports:
