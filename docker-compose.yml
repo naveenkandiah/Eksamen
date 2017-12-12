@@ -4,6 +4,6 @@ services:
   product-service:
     build: .product
     volumes:
-      - ./Users/NaveenKandiah/Documents/GitHub/Eksamen/api.py
+      - ./Users/NaveenKandiah/Documents/GitHub/Eksamen/api
     ports:
       - 5000:80
