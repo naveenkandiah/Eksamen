@@ -4,6 +4,15 @@ services:
   product-service:
     build: ./product
     volumes:
-      - ./Users/NaveenKandiah/Documents/GitHub/Eksamen/api
+      - ./product:/usr/src/app
     ports:
       - 5000:80
+
+website:
+  image: php:apache
+  volumes:
+    - ./website:/var/www/html
+  ports:
+    - 5000:80
+  depends_on:
+    - product-service

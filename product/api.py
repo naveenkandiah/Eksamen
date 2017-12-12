@@ -1,21 +1,21 @@
 # Produckt Service
 
 from flask import Flask
-from flask-restful import Resource, Api
+from flask_restful import Resource, Api
 
-app = FLask(__name__)
+app = Flask(__name__)
 api = Api(app)
 
 class Product(Resource):
     def get(self):
         return {
-            'Product': ['RedBull'
-                        'Cult'
-                        'RockStar'
+            'products': ['RedBull',
+                        'Cult',
+                        'RockStar',
                         'X-Ray']
         }
 
-api.add_resouce(Product, '/')
+api.add_resource(Product, '/')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80, debug=true)
+    app.run(host='0.0.0.0', port=80, debug='true')
